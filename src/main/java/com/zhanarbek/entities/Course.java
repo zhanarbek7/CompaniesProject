@@ -11,4 +11,9 @@ import javax.persistence.*;
 public class Course {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "course_name")
+    private String courseName;
+    @Column(name = "duration_in_month")
+    private String durationInMonth;
+
 }

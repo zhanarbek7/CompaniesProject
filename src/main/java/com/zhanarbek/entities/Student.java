@@ -7,6 +7,7 @@ import javax.persistence.*;
  * Date: 25/2/22
  */
 @Entity
+@Table(name = "students")
 public class Student {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
