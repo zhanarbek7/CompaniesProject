@@ -1,9 +1,11 @@
 package com.zhanarbek.dao;
 
 import com.zhanarbek.entities.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -16,8 +18,9 @@ import java.util.List;
 public class StudentDAOImpl implements StudentDAO{
 
     //inject dependency
-    @PersistenceContext
-    private EntityManager entityManager;
+    @Autowired
+    private EntityManagerFactory entityManagerFactory;
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 
     @Override
@@ -29,6 +32,7 @@ public class StudentDAOImpl implements StudentDAO{
     @Override
     @Transactional
     public List<Student>getAllStudents(){
+        entityManager.persist(new Student());
         return entityManager.createQuery("from Student", Student.class).getResultList();
     }
 }
