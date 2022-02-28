@@ -1,4 +1,4 @@
-package com.zhanarbek.dao;
+package com.zhanarbek.dao.classes;
 
 /**
  * Author: Zhanarbek Abdurasulov

@@ -1,11 +1,10 @@
-package com.zhanarbek.dao;
+package com.zhanarbek.dao.classes;
 
+import com.zhanarbek.dao.interfaces.StudentDAO;
 import com.zhanarbek.entities.Student;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -15,12 +14,10 @@ import java.util.List;
  * Date: 25/2/22
  */
 @Repository
-public class StudentDAOImpl implements StudentDAO{
+public class StudentDAOImpl implements StudentDAO {
 
-    //inject dependency
-    @Autowired
-    private EntityManagerFactory entityManagerFactory;
-    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    @PersistenceContext
+    private EntityManager entityManager;
 
 
     @Override
@@ -32,7 +29,6 @@ public class StudentDAOImpl implements StudentDAO{
     @Override
     @Transactional
     public List<Student>getAllStudents(){
-        entityManager.persist(new Student());
         return entityManager.createQuery("from Student", Student.class).getResultList();
     }
 }

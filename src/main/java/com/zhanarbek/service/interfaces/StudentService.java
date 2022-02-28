@@ -1,6 +1,7 @@
-package com.zhanarbek.dao;
+package com.zhanarbek.service.interfaces;
 
 import com.zhanarbek.entities.Student;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -8,7 +9,8 @@ import java.util.List;
  * Author: Zhanarbek Abdurasulov
  * Date: 25/2/22
  */
-public interface StudentDAO {
+public interface StudentService {
     List<Student> getAllStudents();
     void addStudent(Student student);
+
 }

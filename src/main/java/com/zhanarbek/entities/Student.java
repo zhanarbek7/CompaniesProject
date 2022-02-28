@@ -11,15 +11,26 @@ import javax.persistence.*;
 public class Student {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String surname;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "email")
+    private String email;
+    private StudyFormat studyFormat;
 
-    public Student(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
+    @ManyToOne
+    private Group group;
+
+    public Student(String firstName, String lastName, String email, StudyFormat studyFormat) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.studyFormat = studyFormat;
     }
 
     public Student() {
+
     }
 
     public Long getId() {
@@ -30,28 +41,43 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public StudyFormat getStudyFormat() {
+        return studyFormat;
+    }
+
+    public void setStudyFormat(StudyFormat studyFormat) {
+        this.studyFormat = studyFormat;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
     }
 }

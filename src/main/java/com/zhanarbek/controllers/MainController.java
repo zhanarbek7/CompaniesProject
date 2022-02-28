@@ -1,13 +1,14 @@
 package com.zhanarbek.controllers;
 
-import com.zhanarbek.dao.StudentDAO;
-import com.zhanarbek.entities.Student;
-import com.zhanarbek.service.StudentService;
-import com.zhanarbek.service.StudentServiceImpl;
+import com.zhanarbek.entities.Company;
+import com.zhanarbek.service.interfaces.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import java.util.List;
 
 /**
  * Author: Zhanarbek Abdurasulov
@@ -15,16 +16,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class MainController {
-    @Autowired
-    @Qualifier("studentServiceImpl")
-    private StudentService studentService;
 
     @GetMapping("/")
     public String getMainPage(){
-        studentService.getAllStudents();
         return "main";
     }
-//    public String getCompaniesPage(){
-//        return
-//    }
 }

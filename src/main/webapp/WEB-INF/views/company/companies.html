@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies</title>
+    <style>table,
+
+    td {
+        border: 1px solid #333;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:25px;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-bordered ">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">CompanyName</th>
+        <th scope="col">LocatedCountry</th>
+        <th scope="col">Courses</th>
+        <th scope="col">Groups</th>
+        <th scope="col">Teachers</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody class="table-success">
+    <tr th:each="company : ${companies}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.companyName}"></td>
+        <td th:text="${company.locatedCountry}"></td>
+        <td><a th:href="@{/getCourses(companyId=${company.id})}">
+            <button style = "height: 40px; width: 90px; ">Courses</button></a>
+        </td>
+        <td><a th:href="@{/getGroups(companyId=${company.id})}">
+            <button style = "height: 40px; width: 90px; ">Groups</button></a>
+        </td>
+        <td>Teachers</td>
+        <td>
+            <a th:href="@{/updateCompany(companyId=${company.id})}">
+                <button style = "height: 40px; width: 80px; ">update</button>
+            </a>
+            <a th:href="@{/deleteCompany/(companyId=${company.id})}"
+               onclick="return confirm('Are you sure you want to delete this company?');">
+                <button style = "height: 40px; width: 80px; ">delete</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br><br><br><br>
+<input style = " display: block; margin:auto; font-size:30px;" type="button" value="Add" onclick="window.location.href = 'addCompany'">
+</body>
+</html>
