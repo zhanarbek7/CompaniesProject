@@ -3,6 +3,7 @@ package com.zhanarbek.entities;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov
@@ -18,7 +19,7 @@ public class Group {
     private String dateOfStart;
     private String dateOfFinish;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "groups")
     private List<Course> courses;
 
     @OneToMany(mappedBy = "group")

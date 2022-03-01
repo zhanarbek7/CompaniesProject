@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <style>table,
+
+    td {
+        border: 1px solid #333;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:25px;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+<div style = "text-align:center; margin-top:200px; "><a th:href="@{/getAllCompanies}"><button>Back to companies</button></a></div>
+<br>
+<div style = "text-align:center; "><a th:href="@{/addGroup(companyId=${param.companyId})}"><button>Add</button></a></div>
+<br>
+<table class="table table-bordered ">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Group Name</th>
+        <th scope="col">Date of start</th>
+        <th scope="col">Date of finish</th>
+    </tr>
+    </thead>
+    <tbody class="table-success">
+    <tr th:each="group : ${groups}">
+        <td th:text="${group.id}"></td>
+        <td th:text="${group.dateOfStart}"></td>
+        <td th:text="${group.dateOfFinish}"></td>
+        <td>
+
+            <a th:href="@{/updateCourse(courseId=${group.id},companyId=${param.companyId})}">
+                <button>update</button>
+            </a>
+            <a th:href="@{/deleteCourse(courseId=${group.id},companyId=${param.companyId})}"
+               onclick="return confirm('Are you sure you want to delete this course?');">
+                <button>delete</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+
+</body>
+</html>

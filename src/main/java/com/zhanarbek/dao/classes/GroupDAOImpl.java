@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -13,18 +14,19 @@ import java.util.List;
  * Date: 25/2/22
  */
 @Repository
+@Transactional
 public class GroupDAOImpl implements GroupDAO {
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public List<Group> getAllGroups() {
-        return null;
+        return entityManager.createQuery("from Group", Group.class).getResultList();
     }
 
     @Override
     public void addGroup(Group group) {
-
+        entityManager.persist(group);
     }
 
     @Override

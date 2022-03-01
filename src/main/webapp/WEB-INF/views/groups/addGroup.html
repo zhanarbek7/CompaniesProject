@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="center">
+    <form
+            action="#"
+            th:action="@{/saveGroup(companyId=${param.companyId})}"
+            th:object="${group}"
+            method="post">
+
+        <input type="hidden" name = "id" th:field="*{id}">
+        <input type="text"  name="groupName" th:field="*{groupName}" placeholder="Group Name">
+        <br><br>
+        <input type="text"  name="dateOfStart" th:field="*{dateOfStart}" placeholder="yyyy-mm-dd">
+        <br><br>
+        <input type="text"  name="dateOfFinish" th:field="*{dateOfFinish}" placeholder="yyyy-mm-dd">
+        <br><br>
+<!--        <select th:field="*{courses}">-->
+<!--            <option th:each="s : ${coursesL}"-->
+<!--                    th:value="${s.id}"-->
+<!--                    th:text="${s.courseName}"-->
+<!--            ></option>-->
+<!--        </select>-->
+        <br><br>
+        <input type="submit" value="Add">
+    </form>
+</div>
+</body>
+</html>

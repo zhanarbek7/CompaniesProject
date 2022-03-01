@@ -2,6 +2,7 @@ package com.zhanarbek.entities;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov
@@ -20,7 +21,7 @@ public class Course {
     @ManyToOne
     private Company company;
 
-    @ManyToMany(mappedBy = "courses")
+    @ManyToMany
     private List<Group> groups;
 
     @OneToOne(mappedBy = "course")
@@ -82,5 +83,7 @@ public class Course {
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
+
+
 
 }

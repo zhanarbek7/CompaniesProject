@@ -5,6 +5,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov
@@ -23,10 +24,9 @@ public class Company {
     @OneToMany(fetch=FetchType.EAGER ,cascade = {CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "company")
     private List<Course> courses;
 
+
     public Company() {
     }
-    @OneToMany(mappedBy = "company",fetch = FetchType.EAGER)
-    private List<Group> groups;
 
     public Company(String companyName, String locatedCountry) {
         this.companyName = companyName;
@@ -65,13 +65,7 @@ public class Company {
         this.courses = courses;
     }
 
-    public List<Group> getGroups() {
-        return groups;
-    }
 
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
-    }
 
     @Override
     public String toString() {

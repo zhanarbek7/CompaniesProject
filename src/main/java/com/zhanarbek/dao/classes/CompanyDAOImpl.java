@@ -30,7 +30,7 @@ public class CompanyDAOImpl implements CompanyDAO {
                 return (int) (o1.getId()-o2.getId());
             }
         };
-        Collections.sort(companies, comparator); // use the comparator as much as u want
+        Collections.sort((List<Company>) companies, comparator); // use the comparator as much as u want
         return companies;
     }
 
