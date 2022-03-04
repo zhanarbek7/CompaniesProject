@@ -1,17 +1,23 @@
-package com.zhanarbek.dao.interfaces;
+package com.zhanarbek.service;
 
 import com.zhanarbek.entities.Company;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov
  * Date: 25/2/22
  */
-public interface CompanyDAO {
+public interface CompanyService {
     List<Company> getAllCompanies();
+
     void addCompany(Company company);
+
     Company getCompanyById(Long id);
+
     void updateCompany(Company company);
+
     void deleteCompany(Company company);
+
 }

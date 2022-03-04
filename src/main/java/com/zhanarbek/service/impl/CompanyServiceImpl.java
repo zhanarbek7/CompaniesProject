@@ -1,13 +1,12 @@
-package com.zhanarbek.service.classes;
+package com.zhanarbek.service.impl;
 
-import com.zhanarbek.dao.interfaces.CompanyDAO;
+import com.zhanarbek.dao.CompanyDAO;
 import com.zhanarbek.entities.Company;
-import com.zhanarbek.service.interfaces.CompanyService;
+import com.zhanarbek.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov

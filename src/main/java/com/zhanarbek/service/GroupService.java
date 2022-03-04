@@ -1,4 +1,4 @@
-package com.zhanarbek.service.interfaces;
+package com.zhanarbek.service;
 
 import com.zhanarbek.entities.Group;
 
@@ -11,8 +11,12 @@ import java.util.Set;
  */
 public interface GroupService {
     List<Group> getAllGroups();
+
     void addGroup(Group group);
+
     Group getGroupById(Long id);
+
     void updateGroup(Group group);
+
     void deleteGroup(Group group);
 }

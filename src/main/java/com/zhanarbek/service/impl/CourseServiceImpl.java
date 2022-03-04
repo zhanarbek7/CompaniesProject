@@ -1,8 +1,8 @@
-package com.zhanarbek.service.classes;
+package com.zhanarbek.service.impl;
 
-import com.zhanarbek.dao.interfaces.CourseDAO;
+import com.zhanarbek.dao.CourseDAO;
 import com.zhanarbek.entities.Course;
-import com.zhanarbek.service.interfaces.CourseService;
+import com.zhanarbek.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourseServiceImpl implements CourseService {
     private final CourseDAO courseDAO;
+
     @Autowired
     public CourseServiceImpl(CourseDAO courseDAO) {
         this.courseDAO = courseDAO;

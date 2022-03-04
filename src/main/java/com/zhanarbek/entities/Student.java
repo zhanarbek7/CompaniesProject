@@ -9,14 +9,27 @@ import javax.persistence.*;
 @Entity
 @Table(name = "students")
 public class Student {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(
+            name = "company_sequence",
+            sequenceName = "company_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "company_sequence"
+    )
     private Long id;
+
     @Column(name = "first_name")
     private String firstName;
+
     @Column(name = "last_name")
     private String lastName;
+
     @Column(name = "email")
     private String email;
+
     private StudyFormat studyFormat;
 
     @ManyToOne
@@ -30,7 +43,6 @@ public class Student {
     }
 
     public Student() {
-
     }
 
     public Long getId() {

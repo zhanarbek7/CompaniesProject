@@ -1,5 +1,8 @@
 package com.zhanarbek.entities;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
@@ -11,20 +14,32 @@ import java.util.Set;
 @Entity
 @Table(name = "courses")
 public class Course {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(
+            name = "company_sequence",
+            sequenceName = "company_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "company_sequence"
+    )
     private Long id;
+
     @Column(name = "course_name")
     private String courseName;
+
     @Column(name = "duration_in_month")
     private String durationInMonth;
 
     @ManyToOne
     private Company company;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER,mappedBy = "courses", cascade = {CascadeType.MERGE, CascadeType.REMOVE} )
+    @Fetch(value = FetchMode.SUBSELECT)
     private List<Group> groups;
 
-    @OneToOne(mappedBy = "course")
+    @OneToOne(mappedBy = "course", cascade = CascadeType.REMOVE)
     private Teacher teacher;
 
     public Course(String courseName, String durationInMonth) {
@@ -84,6 +99,15 @@ public class Course {
         this.teacher = teacher;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", courseName='" + courseName + '\'' +
+                ", durationInMonth='" + durationInMonth + '\'' +
+                ", company=" + company +
+                ", groups=" + groups +
+                ", teacher=" + teacher +
+                '}';
+    }
 }

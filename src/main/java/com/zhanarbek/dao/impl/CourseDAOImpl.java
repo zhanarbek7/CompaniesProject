@@ -1,13 +1,12 @@
-package com.zhanarbek.dao.classes;
+package com.zhanarbek.dao.impl;
 
-import com.zhanarbek.dao.interfaces.CourseDAO;
+import com.zhanarbek.dao.CourseDAO;
 import com.zhanarbek.entities.Course;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.util.List;
 
 /**
  * Author: Zhanarbek Abdurasulov

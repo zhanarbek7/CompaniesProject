@@ -18,8 +18,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
 public class PersistenceJPAConfig {
+    private final Environment env;
     @Autowired
-    private Environment env;
+    public PersistenceJPAConfig(Environment env) {
+        this.env = env;
+    }
+
     @Bean
     public LocalContainerEntityManagerFactoryBean getEntityManagerFactoryBean() {
         LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
@@ -30,10 +34,12 @@ public class PersistenceJPAConfig {
         lcemfb.setJpaProperties(jpaProperties());
         return lcemfb;
     }
+
     @Bean
     public JpaVendorAdapter getJpaVendorAdapter() {
         return new HibernateJpaVendorAdapter();
     }
+
     @Bean
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
@@ -43,11 +49,13 @@ public class PersistenceJPAConfig {
         dataSource.setPassword(env.getProperty("db.password"));
         return dataSource;
     }
+
     @Bean
     public PlatformTransactionManager txManager(){
         return new JpaTransactionManager(
                 Objects.requireNonNull(getEntityManagerFactoryBean().getObject()));
     }
+
     private Properties jpaProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));

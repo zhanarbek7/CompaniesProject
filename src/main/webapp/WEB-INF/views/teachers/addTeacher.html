@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,17 +9,19 @@
 <div>
     <form
             action="#"
-            th:action="@{/saveCompany}"
-            th:object="${company}"
+            th:action="@{/saveTeacher(courseId=${param.courseId})}"
+            th:object="${teacher}"
             method="post"
             style="text-align:center; margin-top:200px; font-size: 30px;">
 
         <input type="hidden" name = "id" th:field="*{id}">
-        <input type="text"  name="companyName" th:field="*{companyName}" placeholder="Company Name">
+        <input type="text"  name="firstName" th:field="*{firstName}" placeholder="First name">
         <br><br>
-        <input type="text"  name="locatedCountry" th:field="*{locatedCountry}" placeholder="Located Country">
+        <input type="text"  name="lastName" th:field="*{lastName}" placeholder="Last name">
         <br><br>
-        <input type="submit" value="Add">
+        <input type="text"  name="email" th:field="*{email}" placeholder="Email">
+        <br><br>
+        <input type="submit" value="Add Teacher">
     </form>
 </div>
 </body>

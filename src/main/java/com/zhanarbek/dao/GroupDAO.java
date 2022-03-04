@@ -1,4 +1,4 @@
-package com.zhanarbek.dao.interfaces;
+package com.zhanarbek.dao;
 
 import com.zhanarbek.entities.Group;
 
@@ -10,8 +10,12 @@ import java.util.List;
  */
 public interface GroupDAO {
     List<Group> getAllGroups();
+
     void addGroup(Group group);
+
     Group getGroupById(Long id);
+
     void updateGroup(Group group);
+
     void deleteGroup(Group group);
 }

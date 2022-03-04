@@ -1,6 +1,7 @@
-package com.zhanarbek.dao.interfaces;
+package com.zhanarbek.dao;
 
 import com.zhanarbek.entities.Student;
+import com.zhanarbek.entities.Teacher;
 
 import java.util.List;
 
@@ -10,5 +11,12 @@ import java.util.List;
  */
 public interface StudentDAO {
     List<Student> getAllStudents();
+
     void addStudent(Student student);
+
+    Student getStudentById(Long id);
+
+    void updateStudent(Student student);
+
+    void deleteStudent(Student student);
 }

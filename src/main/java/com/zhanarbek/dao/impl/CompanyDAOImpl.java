@@ -1,6 +1,6 @@
-package com.zhanarbek.dao.classes;
+package com.zhanarbek.dao.impl;
 
-import com.zhanarbek.dao.interfaces.CompanyDAO;
+import com.zhanarbek.dao.CompanyDAO;
 import com.zhanarbek.entities.Company;
 import org.springframework.stereotype.Repository;
 

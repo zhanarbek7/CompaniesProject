@@ -9,26 +9,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="second commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/CompanyDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/CompanyDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/GroupDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/GroupDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/TeacherDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/TeacherDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/TeacherDAO.java" afterDir="false" />
+    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="working commit">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/StudentDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/TeacherDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/TeacherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/impl/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/configs/PersistenceJPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/configs/PersistenceJPAConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/GroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/CompanyDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/CompanyDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/CourseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/GroupDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/GroupDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/StudentDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/classes/TeacherDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/CompanyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/CompanyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/GroupDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/GroupDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/interfaces/TeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/TeacherDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/entities/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/classes/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/impl/CompanyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/classes/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/impl/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/classes/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/impl/GroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/classes/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/classes/TeacherServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/interfaces/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/interfaces/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/interfaces/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/interfaces/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/service/interfaces/TeacherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/addCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/addCompany.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/companies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/companies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/addCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/addCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/addGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/groups.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/groups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/updateGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/updateGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/addStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/addStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/students.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/students.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/updateStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/updateStudents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/addTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/addTeacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/teachers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teachers/updateTeacher.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,6 +84,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -80,6 +130,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -93,6 +144,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/zhanarbek/configs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company" />
     </key>
@@ -223,7 +275,11 @@
       <workItem from="1645769159997" duration="29628000" />
       <workItem from="1645854450583" duration="43905000" />
       <workItem from="1646032023716" duration="5358000" />
-      <workItem from="1646038985243" duration="15697000" />
+      <workItem from="1646038985243" duration="24992000" />
+      <workItem from="1646210529540" duration="20614000" />
+      <workItem from="1646296290403" duration="16230000" />
+      <workItem from="1646374971679" duration="805000" />
+      <workItem from="1646389531109" duration="3260000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1645799372650</created>
@@ -246,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646038283566</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working commit">
+      <created>1646135882632</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646135882632</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +328,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="working commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="working commit" />
   </component>
 </project>

@@ -14,17 +14,26 @@ import java.util.Set;
 @Entity
 @Table(name = "companies")
 public class Company {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(
+            name = "company_sequence",
+            sequenceName = "company_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "company_sequence"
+    )
     private Long id;
+
     @Column(name ="company_name")
     private String companyName;
+
     @Column(name = "located_country")
     private String locatedCountry;
 
     @OneToMany(fetch=FetchType.EAGER ,cascade = {CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "company")
     private List<Course> courses;
-
-
     public Company() {
     }
 
@@ -64,8 +73,6 @@ public class Company {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
-
-
 
     @Override
     public String toString() {

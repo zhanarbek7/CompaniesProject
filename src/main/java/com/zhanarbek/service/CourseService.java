@@ -1,4 +1,4 @@
-package com.zhanarbek.service.interfaces;
+package com.zhanarbek.service;
 
 import com.zhanarbek.entities.Course;
 
@@ -8,7 +8,10 @@ import com.zhanarbek.entities.Course;
  */
 public interface CourseService {
     void addCourse(Course course);
+
     Course getCourseById(Long id);
+
     void updateCourse(Course course);
+
     void deleteCourse(Course course);
 }

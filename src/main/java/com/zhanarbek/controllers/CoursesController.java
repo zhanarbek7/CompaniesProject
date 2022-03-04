@@ -1,20 +1,16 @@
 package com.zhanarbek.controllers;
 
-import com.zhanarbek.entities.Company;
 import com.zhanarbek.entities.Course;
-import com.zhanarbek.service.interfaces.CompanyService;
-import com.zhanarbek.service.interfaces.CourseService;
+import com.zhanarbek.service.CompanyService;
+import com.zhanarbek.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Author: Zhanarbek Abdurasulov
@@ -31,7 +27,7 @@ public class CoursesController {
     }
 
     //Sorting courses by id
-    @RequestMapping("/getCourses")
+    @GetMapping("/getCourses")
     public String getAllCourses(@RequestParam("companyId") Long id, Model model){
         List<Course> courses = companyService.getCompanyById(id).getCourses();
         Comparator<Course> comparator = new Comparator<Course>() {
@@ -42,36 +38,41 @@ public class CoursesController {
         };
         Collections.sort(courses, comparator); // use the comparator as much as u want
         model.addAttribute("courses",courses);
+        model.addAttribute("companyName", companyService.getCompanyById(id));
         return "courses/courses";
     }
 
-    @RequestMapping("/addCourse")
+    @GetMapping("/addCourse")
     public String addCourse(Model model){
         model.addAttribute("course",new Course());
         return "courses/addCourse";
     }
-    @RequestMapping("saveCourse")
+
+    @PostMapping("saveCourse")
     public String saveCourse(@RequestParam("companyId") Long id,@ModelAttribute("course") Course course){
         companyService.getCompanyById(id).getCourses().add(course);
         course.setCompany(companyService.getCompanyById(id));
         coursesService.addCourse(course);
         return "redirect:/getCourses?companyId="+id;
     }
-    @RequestMapping("/updateCourse")
+
+    @GetMapping("/updateCourse")
     public String updateCourse(@RequestParam("courseId") Long id, Model model){
         Course course =  coursesService.getCourseById(id);
         model.addAttribute("course", course);
         return "courses/updateCourse";
     }
-    @RequestMapping("/saveUpdateCourse")
+
+    @PutMapping("/saveUpdateCourse")
     public String saveUpdateCourse(@RequestParam("companyId") Long id,@ModelAttribute("course") Course course){
         course.setCompany(companyService.getCompanyById(id));
         coursesService.updateCourse(course);
         return "redirect:/getCourses?companyId="+id;
     }
-    @RequestMapping("/deleteCourse")
+
+    @DeleteMapping("/deleteCourse")
     public String deleteCourse(@RequestParam("courseId") Long id, @RequestParam("companyId") Long id2){
         coursesService.deleteCourse(coursesService.getCourseById(id));
-        return "redirect:/getCourses?companyId="+id;
+        return "redirect:/getCourses?companyId="+id2;
     }
 }

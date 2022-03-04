@@ -8,6 +8,7 @@
 
     td {
         border: 1px solid #333;
+        margin-top:200px;
         margin-left: auto;
         margin-right: auto;
         font-size:25px;
@@ -21,10 +22,14 @@
     </style>
 </head>
 <body>
-<div style = "text-align:center; margin-top:200px; "><a th:href="@{/getAllCompanies}"><button>Back to companies</button></a></div>
-<br>
-<div style = "text-align:center; "><a th:href="@{/addGroup(companyId=${param.companyId})}"><button>Add</button></a></div>
-<br>
+
+<form action="findStudent" method="get" style="text-align:center; margin-top:100px">
+    <label><input type="text" name = "studentName" style="height:20px; width:300px;"
+                  placeholder="Student name" /></label>
+    <br><br>
+    <input type="submit" value="Find student">
+</form>
+
 <table class="table table-bordered ">
     <thead class="table-dark">
     <tr>
@@ -32,26 +37,37 @@
         <th scope="col">Group Name</th>
         <th scope="col">Date of start</th>
         <th scope="col">Date of finish</th>
+        <th scope="col">Students</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody class="table-success">
     <tr th:each="group : ${groups}">
         <td th:text="${group.id}"></td>
+        <td th:text="${group.groupName}"></td>
         <td th:text="${group.dateOfStart}"></td>
         <td th:text="${group.dateOfFinish}"></td>
+        <td><a th:href="@{/getStudents(groupId=${group.id})}">
+            <button style = "height: 40px; width: 90px; background-color:paleturquoise;">Students</button></a>
+        </td>
         <td>
 
-            <a th:href="@{/updateCourse(courseId=${group.id},companyId=${param.companyId})}">
-                <button>update</button>
-            </a>
-            <a th:href="@{/deleteCourse(courseId=${group.id},companyId=${param.companyId})}"
-               onclick="return confirm('Are you sure you want to delete this course?');">
-                <button>delete</button>
+            <a th:href="@{/updateGroup(groupId=${group.id},companyId=${param.companyId})}">
+                <button style = "height: 40px; width: 80px; background-color:lawngreen;">update</button>
             </a>
         </td>
+        <td><a th:href="@{/deleteGroup(groupId=${group.id},companyId=${param.companyId})}"
+               onclick="return confirm('Are you sure you want to delete this group?');">
+            <button style = "height: 40px; width: 80px; background-color:red;">delete</button>
+        </a></td>
     </tr>
     </tbody>
 </table>
+<br><br>
+<div style = "text-align:center; "><a th:href="@{/addGroup(companyId=${param.companyId})}"><button style = "font-size:30px;">Add group</button></a></div>
+<br>
+<div style = "text-align:center;"><a th:href="@{/getAllCompanies}"><button style = "font-size:20px;">Back to companies</button></a></div>
 <br>
 
 </body>
