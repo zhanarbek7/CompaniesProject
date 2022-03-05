@@ -29,6 +29,7 @@ public class CoursesController {
     //Sorting courses by id
     @GetMapping("/getCourses")
     public String getAllCourses(@RequestParam("companyId") Long id, Model model){
+        model.addAttribute("companyName", companyService.getCompanyById(id).getCompanyName());
         List<Course> courses = companyService.getCompanyById(id).getCourses();
         Comparator<Course> comparator = new Comparator<Course>() {
             @Override
