@@ -68,7 +68,7 @@ public class StudentController {
         return "redirect:/getStudents?groupId="+groupId;
     }
 
-    @DeleteMapping("/deleteStudent")
+    @RequestMapping("/deleteStudent")
     public String deleteStudent(@RequestParam("studentId") Long studentId, @RequestParam("groupId") Long groupId){
         System.out.println("Hello world");
         studentService.deleteStudent(studentService.getStudentById(studentId));

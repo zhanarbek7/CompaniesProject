@@ -116,7 +116,7 @@ public class GroupController {
         return "redirect:/getGroups?companyId="+id;
     }
 
-    @DeleteMapping("/deleteGroup")
+    @RequestMapping("/deleteGroup")
     public String deleteGroup(@RequestParam("groupId") Long groupId, @RequestParam("companyId") Long companyId){
         groupService.deleteGroup(groupService.getGroupById(groupId));
         return "redirect:/getGroups?companyId="+companyId;

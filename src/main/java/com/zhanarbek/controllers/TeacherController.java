@@ -73,7 +73,7 @@ public class TeacherController {
         return "redirect:/getTeachers?courseId="+coursesId;
     }
 
-    @DeleteMapping("/deleteTeacher")
+    @RequestMapping("/deleteTeacher")
     public String deleteCourse(@RequestParam("courseId") Long coursesId, @RequestParam("teacherId") Long teacherId){
         teacherService.deleteTeacher(teacherService.getTeacherById(teacherId));
         return "redirect:/getTeachers?courseId="+coursesId;

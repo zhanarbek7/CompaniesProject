@@ -70,7 +70,7 @@ public class CoursesController {
         return "redirect:/getCourses?companyId="+id;
     }
 
-    @DeleteMapping("/deleteCourse")
+    @RequestMapping("/deleteCourse")
     public String deleteCourse(@RequestParam("courseId") Long id, @RequestParam("companyId") Long id2){
         coursesService.deleteCourse(coursesService.getCourseById(id));
         return "redirect:/getCourses?companyId="+id2;
