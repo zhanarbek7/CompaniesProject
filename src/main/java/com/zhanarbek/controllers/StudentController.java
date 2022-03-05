@@ -61,7 +61,7 @@ public class StudentController {
         model.addAttribute("student",student );
         return "students/updateStudents";
     }
-    @PutMapping("/saveUpdateStudent")
+    @PostMapping("/saveUpdateStudent")
     public String saveUpdateStudent(@RequestParam("groupId") Long groupId, @ModelAttribute("student") Student student){
         student.setGroup(groupService.getGroupById(groupId));
         studentService.updateStudent(student);

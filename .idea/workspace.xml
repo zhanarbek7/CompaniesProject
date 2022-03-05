@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="Final commit!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="One more fix, fixed deletion!">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/GroupController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +225,7 @@
       <workItem from="1646296290403" duration="16230000" />
       <workItem from="1646374971679" duration="805000" />
       <workItem from="1646389531109" duration="4504000" />
+      <workItem from="1646473528991" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1645799372650</created>
@@ -261,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646396856011</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="One more fix, fixed deletion!">
+      <created>1646473696171</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646473696171</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +290,7 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="working commit" />
     <MESSAGE value="Final commit!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final commit!" />
+    <MESSAGE value="One more fix, fixed deletion!" />
+    <option name="LAST_COMMIT_MESSAGE" value="One more fix, fixed deletion!" />
   </component>
 </project>

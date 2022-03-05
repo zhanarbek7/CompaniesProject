@@ -54,7 +54,7 @@ public class CompanyController {
         return "company/updateCompany";
     }
 
-    @PutMapping("/saveUpdateCompany")
+    @PostMapping("/saveUpdateCompany")
     public String saveUpdateCompany(@ModelAttribute("company") Company company){
         companyService.updateCompany(company);
         return "redirect:/getAllCompanies";

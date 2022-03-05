@@ -96,7 +96,7 @@ public class GroupController {
         return "groups/updateGroup";
     }
 
-    @PutMapping("/saveUpdateGroup")
+    @PostMapping("/saveUpdateGroup")
     public String saveUpdateGroup(@RequestParam("companyId") Long id,
                             @ModelAttribute("group") Group group,
                             @RequestParam(value = "courss" , required = false) String[] sCourses){

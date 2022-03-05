@@ -63,7 +63,7 @@ public class CoursesController {
         return "courses/updateCourse";
     }
 
-    @PutMapping("/saveUpdateCourse")
+    @PostMapping("/saveUpdateCourse")
     public String saveUpdateCourse(@RequestParam("companyId") Long id,@ModelAttribute("course") Course course){
         course.setCompany(companyService.getCompanyById(id));
         coursesService.updateCourse(course);
