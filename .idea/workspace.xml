@@ -9,12 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="One more fix, fixed updates!">
+    <list default="true" id="617e994e-17a5-4b90-bc2e-82e82f0d0dea" name="Changes" comment="One more fix, made forms to be located in the center!">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026318a-eaa5-4f44-a5d3-6cdf313b08e0/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/controllers/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/CompanyDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhanarbek/dao/impl/CompanyDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/updateCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/company/updateCompany.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/addCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/addCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/courses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/updateCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/updateCourse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/addGroup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/updateGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/groups/updateGroup.html" afterDir="false" />
@@ -232,7 +235,10 @@
       <workItem from="1646296290403" duration="16230000" />
       <workItem from="1646374971679" duration="805000" />
       <workItem from="1646389531109" duration="4504000" />
-      <workItem from="1646473528991" duration="1739000" />
+      <workItem from="1646473528991" duration="2235000" />
+      <workItem from="1646480982585" duration="3146000" />
+      <workItem from="1646578062577" duration="1118000" />
+      <workItem from="1646732748580" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1645799372650</created>
@@ -283,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646474004139</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="One more fix, made forms to be located in the center!">
+      <created>1646475429525</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646475429525</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +319,7 @@
     <MESSAGE value="Final commit!" />
     <MESSAGE value="One more fix, fixed deletion!" />
     <MESSAGE value="One more fix, fixed updates!" />
-    <option name="LAST_COMMIT_MESSAGE" value="One more fix, fixed updates!" />
+    <MESSAGE value="One more fix, made forms to be located in the center!" />
+    <option name="LAST_COMMIT_MESSAGE" value="One more fix, made forms to be located in the center!" />
   </component>
 </project>

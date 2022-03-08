@@ -11,7 +11,7 @@
         th:action="@{/saveUpdateCompany}"
         th:object="${company}"
         method="post"
-        style="text-align:center; margin-top:200px; font-size: 30px;">>
+        style="text-align:center; margin-top:200px; font-size: 30px;">
 
     <input type="hidden" name = "id" th:field="*{id}">
     <input type="text"  name="companyName" th:field="*{companyName}" placeholder="Company Name">

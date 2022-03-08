@@ -47,7 +47,7 @@ public class CompanyController {
         return "redirect:/getAllCompanies";
     }
 
-    @PutMapping("/updateCompany")
+    @GetMapping("/updateCompany")
     public String updateCompany(@RequestParam("companyId") Long id, Model model){
         Company company =  companyService.getCompanyById(id);
         model.addAttribute("company",company);

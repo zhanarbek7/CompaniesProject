@@ -12,7 +12,7 @@
             th:action="@{/saveUpdateGroup(companyId=${param.companyId})}"
             th:object="${group}"
             method="post"
-            style="text-align:center; margin-top:200px; font-size: 30px;">>
+            style="text-align:center; margin-top:200px; font-size: 30px;">
 
         <input type="hidden" name = "id" th:field="*{id}">
         <label><input type="text"  name="groupName" th:field="*{groupName}" placeholder="Group Name"></label>

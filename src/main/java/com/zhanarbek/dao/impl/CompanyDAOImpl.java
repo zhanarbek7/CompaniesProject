@@ -24,13 +24,8 @@ public class CompanyDAOImpl implements CompanyDAO {
     @Override
     public List<Company> getAllCompanies() {
         List<Company> companies = entityManager.createQuery("from Company ", Company.class).getResultList();
-        Comparator<Company> comparator = new Comparator<Company>() {
-            @Override
-            public int compare(Company o1, Company o2) {
-                return (int) (o1.getId()-o2.getId());
-            }
-        };
-        Collections.sort((List<Company>) companies, comparator); // use the comparator as much as u want
+        Comparator<Company> comparator = (o1, o2) -> (int) (o1.getId()-o2.getId());
+        companies.sort(comparator);
         return companies;
     }
 
